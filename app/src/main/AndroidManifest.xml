@@ -13,10 +13,7 @@
             android:name=".HeroesDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".HeroesDetail"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
+            android:name=".HeroesListActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
