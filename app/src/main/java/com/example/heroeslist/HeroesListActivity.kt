@@ -2,7 +2,6 @@ package com.example.heroeslist
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.heroeslist.databinding.ActivityHeroesListBinding
 import com.google.gson.Gson

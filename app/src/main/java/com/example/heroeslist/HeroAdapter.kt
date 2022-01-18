@@ -1,5 +1,6 @@
 package com.example.heroeslist
 
+import android.content.Intent
 import android.widget.Toast
 
 
@@ -43,7 +44,12 @@ class HeroAdapter(var dataSet: List<Hero>) :
         viewHolder.textViewName.text = hero.name
         viewHolder.textViewDesc.text = hero.description
         viewHolder.layout.setOnClickListener {
-            Toast.makeText(it.context , "Hi, you clicked on ${hero.name}", Toast.LENGTH_SHORT).show()
+            // Toast.makeText(it.context , "Hi, you clicked on ${hero.name}", Toast.LENGTH_SHORT).show()
+            val context = viewHolder.layout.context
+            val heroDetailIntent = Intent(context, HeroesDetailActivity::class.java).apply {
+                putExtra(HeroesDetailActivity.EXTRA_HERO, hero)
+            }
+            context.startActivity(heroDetailIntent)
         }
     }
 
